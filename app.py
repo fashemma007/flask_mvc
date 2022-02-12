@@ -12,9 +12,10 @@ app.config.from_object(DevConfig)
 
 @app.route('/')
 def home():
-    return '<h1>Hello!</h1>'
+    # return '<h1>Hello!</h1>'
+    return render_template('base.html')
 
-@app.route('/user')
+@app.route('/user',methods=['GET', 'POST'])
 def user():
     return render_template('user.html')
 

@@ -1,6 +1,10 @@
 class Config(object):
    pass
 class ProdConfig(Config):
-   pass
+   ENV = "production"
+   DEVELOPMENT=False
+   DEBUG=False
 class DevConfig(Config):
-   DEBUG = True
+   ENV = "development"
+   DEVELOPMENT=True
+   DEBUG=True
